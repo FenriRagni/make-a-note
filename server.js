@@ -17,7 +17,7 @@ app.get('/notes', (req, res) => {
 })
 
 app.get('/api/notes', (req, res) => {
-    fs.readFile("./db/db.json", (err, data) => {
+    fs.readFile("/db/db.json", (err, data) => {
         if(err){
             console.log("could not read file");
         }
@@ -39,14 +39,14 @@ app.post('/api/notes', (req, res) => {
         text
     };
     console.log(note);
-    fs.readFile("./db/db.json", (err, data) => {
+    fs.readFile("/db/db.json", (err, data) => {
         if(err){
             console.log("could not read file");
         }
         else{
             let tempNote = JSON.parse(data);
             tempNote.push(note);
-            fs.writeFile("./db/db.json", JSON.stringify(tempNote, null, 2), (err)=> {
+            fs.writeFile("/db/db.json", JSON.stringify(tempNote, null, 2), (err)=> {
                 if(err){
                     console.log("error occured");
                 }
@@ -61,14 +61,14 @@ app.post('/api/notes', (req, res) => {
 })
 
 app.delete('/api/notes/:id', (req,res) => {
-    fs.readFile("./db/db.json", (err, data) => {
+    fs.readFile("/db/db.json", (err, data) => {
         if(err){
             console.log("could not read file");
         }
         else{
             let tempNote = JSON.parse(data);
             tempNote.splice(tempNote.indexOf(req.params.id),1);
-            fs.writeFile("./db/db.json", JSON.stringify(tempNote, null, 2), (err) => {
+            fs.writeFile("/db/db.json", JSON.stringify(tempNote, null, 2), (err) => {
                 if(err){
                     console.log("error occured");
                 }
