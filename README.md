@@ -2,6 +2,8 @@
 
 ## Description
 Created the backend functionality of the given front end website to take notes.
+![index.html](./images/indexhtml.png)
+![notes.html](./images/noteshtml.png)
 
 ## Table of Contents
 [Technology Used](#technology-used)<br>
@@ -19,7 +21,7 @@ Created the backend functionality of the given front end website to take notes.
 |Node.js|[link](https://nodejs.org/en/docs)|
 |npm|[link](https://www.npmjs.com)|
 ## Usage
-[Application demo](https://drive.google.com/file/d/1O-HIiKV6LKYYweH418gRTSxKUDLKTKsE/view)
+![note-demo](./images/Note%20Taker.gif)
 
 ## Learning Points
 Througout this project, I got a better understanding of how to use express. The intricacies of setting up a sever to listen to requests. 
